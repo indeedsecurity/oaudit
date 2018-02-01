@@ -71,9 +71,9 @@ sends notifications with educational information about Oauth scopes.
     ```
 
 1. Run `oaudit-notifier` with CLI args:
-	
-	``` bash
-	python3 collector/collector.py \
+
+    ``` bash
+    python3 notifier/notifier.py \
         --secret-file "/run/secrets/oauth-notify" \
         --service-account-email "svcaccount@domain.com" \
         --elasticsearch-hosts "esnode1:9200,esnode2:9200" \
