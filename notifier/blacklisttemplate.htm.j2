@@ -1,0 +1,52 @@
+<div class="m_763974036656301042gmail-container"
+     style="box-sizing:border-box;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto">
+
+    <center><img height="48px" width="36px" src="https://i.imgur.com/fMcrNsp.png" class="CToWUd"></center>
+
+    <h4 style="box-sizing:border-box;font-family:inherit;font-weight:500;line-height:1.1;color:inherit;margin-top:20px;margin-bottom:10px">
+        <font size="4">
+            Your access to <b style="box-sizing:border-box;font-weight:700">{{ auth['app_name'] }}</b> has been revoked.</font></h4>
+
+    {% for scope in auth['scopes'] if 5 <= scope['Weight'] %}
+    <div class="m_763974036656301042gmail-alert m_763974036656301042gmail-alert-danger"
+         style="box-sizing:border-box;padding:10px;margin-bottom:15px;border:1px solid rgb(235,204,209);border-radius:4px;color:rgb(169,68,66);background-color:rgb(242,222,222)">
+        <img height="20px" width="20px" src="https://i.imgur.com/5SkoXti.png" class="CToWUd">&nbsp;
+        <strong style="box-sizing:border-box;font-weight:700">
+             High risk: &nbsp;{{ scope['Description'] }}
+        </strong>
+    </div>
+    {% endfor %}
+
+    {% for scope in auth['scopes'] if 2 <= scope['Weight'] < 5 %}
+    <div class="m_763974036656301042gmail-alert m_763974036656301042gmail-alert-warning"
+         style="box-sizing:border-box;padding:10px;margin-bottom:15px;border:1px solid rgb(250,235,204);border-radius:4px;color:rgb(138,109,59);background-color:rgb(252,248,227)">
+        <img height="20px" width="20px" src="https://i.imgur.com/JtdMS59.png" class="CToWUd">&nbsp;
+        <strong style="box-sizing:border-box;font-weight:700">
+            Medium risk: &nbsp;{{ scope['Description'] }}
+        </strong>
+    </div>
+    {% endfor %}
+
+
+    {% for scope in auth['scopes'] if 0 <= scope['Weight'] < 2 %}
+    <div class="m_763974036656301042gmail-alert m_763974036656301042gmail-alert-success"
+         style="box-sizing:border-box;padding:10px;margin-bottom:15px;border:1px solid rgb(214,233,198);border-radius:4px;color:rgb(60,118,61);background-color:rgb(223,240,216)">
+        <img height="20px" width="20px" src="https://i.imgur.com/0WPCPmZ.png" class="CToWUd">&nbsp;
+        <strong style="box-sizing:border-box;font-weight:700">
+            Low risk: &nbsp;{{ scope['Description'] }}
+        </strong>
+    </div>
+    {% endfor %}
+
+    <h4 style="box-sizing:border-box;font-family:inherit;font-weight:300;line-height:1.1;color:inherit;margin-top:20px;margin-bottom:10px">
+        <font size="3">
+        This access was revoked because {{ auth['app_name'] }} is blacklisted. Possible blacklist reasons include known malicious applications or policy violation.<br><br>
+        If you feel this is in error, please contact EXAMPLE@MAIL.COM.
+        </font>
+    </h4>
+    <br><br>
+    <div>
+        <div style="font-size:12.8px">Email:&nbsp;<a href="mailto:example@mail.com" target="_blank">example@mail.com</a></div>
+        <div style="font-size:12.8px">More Information:&nbsp;<a href="www.example.com" target="_blank">www.example.com</a></div>
+    </div>
+</div>

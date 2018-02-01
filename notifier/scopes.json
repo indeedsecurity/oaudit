@@ -1,0 +1,858 @@
+{
+    "https://www.googleapis.com/auth/adexchange.buyer": {
+        "Weight": 20,
+        "Description": "Manage your Ad Exchange buyer account configuration"
+    },
+    "https://www.googleapis.com/auth/adsense.readonly": {
+        "Weight": 20,
+        "Description": "View your AdSense data"
+    },
+    "https://www.googleapis.com/auth/admin.directory.customer": {
+        "Weight": 100,
+        "Description": "View and manage customer related information"
+    },
+    "https://www.googleapis.com/auth/fitness.body_temperature.read": {
+        "Weight": 1,
+        "Description": "View body temperature data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/books": {
+        "Weight": 2,
+        "Description": "Manage your books"
+    },
+    "https://www.googleapis.com/auth/adsensehost": {
+        "Weight": 100,
+        "Description": "View and manage your AdSense host data and associated accounts"
+    },
+    "https://www.googleapis.com/auth/classroom.student-submissions.me.readonly": {
+        "Weight": 1,
+        "Description": "View your course work and grades in Google Classroom"
+    },
+    "https://www.googleapis.com/auth/admin.directory.group.member": {
+        "Weight": 100,
+        "Description": "View and manage group subscriptions on your domain"
+    },
+    "https://www.googleapis.com/auth/classroom.coursework.me.readonly": {
+        "Weight": 1,
+        "Description": "View your course work and grades in Google Classroom"
+    },
+    "https://www.googleapis.com/auth/cloud.useraccounts.readonly": {
+        "Weight": 1,
+        "Description": "View your Google Cloud User Accounts"
+    },
+    "https://www.googleapis.com/auth/admin.reports.usage.readonly": {
+        "Weight": 50,
+        "Description": "View usage reports of Google Apps for your domain"
+    },
+    "https://www.googleapis.com/auth/dfareporting": {
+        "Weight": 2,
+        "Description": "View and manage DoubleClick for Advertisers reports"
+    },
+    "https://www.googleapis.com/auth/tasks": {
+        "Weight": 2,
+        "Description": "Manage your tasks"
+    },
+    "https://www.googleapis.com/auth/bigquery.insertdata": {
+        "Weight": 2,
+        "Description": "Insert data into Google BigQuery"
+    },
+    "https://mail.google.com/": {
+        "Weight": 10,
+        "Description": "View and manage your mail"
+    },
+    "https://www.googleapis.com/auth/admin.directory.domain.readonly": {
+        "Weight": 50,
+        "Description": "View domains related to your customers"
+    },
+    "https://www.google.com/m8/feeds": {
+        "Weight": 5,
+        "Description": "Manage your contacts"
+    },
+    "https://www.googleapis.com/auth/gmail.metadata": {
+        "Weight": 5,
+        "Description": "View your email message metadata such as labels and headers, but not the email body"
+    },
+    "https://www.googleapis.com/auth/urlshortener": {
+        "Weight": 5,
+        "Description": "Manage your goo.gl short URLs"
+    },
+    "https://www.googleapis.com/auth/admin.directory.orgunit.readonly": {
+        "Weight": 50,
+        "Description": "View organization units on your domain"
+    },
+    "https://www.googleapis.com/auth/apps.licensing": {
+        "Weight": 50,
+        "Description": "View and manage Google Apps licenses for your domain"
+    },
+    "https://www.googleapis.com/auth/admin.directory.domain": {
+        "Weight": 100,
+        "Description": "View and manage the provisioning of domains for your customers"
+    },
+    "https://www.googleapis.com/auth/user.addresses.read": {
+        "Weight": 1,
+        "Description": "View your street addresses"
+    },
+    "https://www.googleapis.com/auth/userinfo.email": {
+        "Weight": 1,
+        "Description": "View your email address"
+    },
+    "https://www.googleapis.com/auth/plus.circles.read": {
+        "Weight": 1,
+        "Description": "View your circles and the people and pages in them"
+    },
+    "https://www.googleapis.com/auth/apps.groups.settings": {
+        "Weight": 50,
+        "Description": "View and manage the settings of a Google Apps Group"
+    },
+    "https://www.googleapis.com/auth/admin.directory.resource.calendar.readonly": {
+        "Weight": 50,
+        "Description": "View calendar resources on your domain"
+    },
+    "https://www.googleapis.com/auth/sqlservice.admin": {
+        "Weight": 10,
+        "Description": "Manage your Google SQL Service instances"
+    },
+    "https://www.googleapis.com/auth/plus.stream.write": {
+        "Weight": 10,
+        "Description": "Manage your Google+ posts, comments, and stream"
+    },
+    "https://www.googleapis.com/auth/pubsub": {
+        "Weight": 5,
+        "Description": "View and manage Pub/Sub topics and subscriptions"
+    },
+    "https://www.googleapis.com/auth/games": {
+        "Weight": 1,
+        "Description": "Share your Google+ profile information and view and manage your game activity"
+    },
+    "https://www.googleapis.com/auth/apps.groups.migration": {
+        "Weight": 50,
+        "Description": "Manage messages in groups on your domain"
+    },
+    "https://www.googleapis.com/auth/taskqueue.consumer": {
+        "Weight": 1,
+        "Description": "Consume Tasks from your Taskqueues"
+    },
+    "https://www.googleapis.com/auth/trace.append": {
+        "Weight": 1,
+        "Description": "Write Trace data for a project or application"
+    },
+    "email": {
+        "Weight": 1,
+        "Description": "View your email address"
+    },
+    "https://www.googleapis.com/auth/taskqueue": {
+        "Weight": 2,
+        "Description": "Manage your Tasks and Taskqueues"
+    },
+    "https://www.googleapis.com/auth/fitness.location.read": {
+        "Weight": 5,
+        "Description": "View your stored location data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/fitness.body.write": {
+        "Weight": 1,
+        "Description": "View and store body sensor data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/fitness.blood_pressure.read": {
+        "Weight": 1,
+        "Description": "View blood pressure data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/cloud-platform.read-only": {
+        "Weight": 5,
+        "Description": "View your data across Google Cloud Platform services"
+    },
+    "https://www.googleapis.com/auth/fitness.oxygen_saturation.read": {
+        "Weight": 1,
+        "Description": "View oxygen saturation data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/contacts.readonly": {
+        "Weight": 5,
+        "Description": "View your contacts"
+    },
+    "https://www.googleapis.com/auth/admin.directory.user.security": {
+        "Weight": 100,
+        "Description": "Manage data access permissions for users on your domain"
+    },
+    "https://www.googleapis.com/auth/drive.file": {
+        "Weight": 5,
+        "Description": "View and manage Google Drive files and folders that you have opened or created with this app"
+    },
+    "https://www.googleapis.com/auth/datastore": {
+        "Weight": 10,
+        "Description": "View and manage your Google Cloud Datastore data"
+    },
+    "https://www.googleapis.com/auth/classroom.courses": {
+        "Weight": 2,
+        "Description": "Manage your Google Classroom classes"
+    },
+    "https://www.googleapis.com/auth/forms": {
+        "Weight": 10,
+        "Description": "View and manage your forms in Google Drive"
+    },
+    "https://www.googleapis.com/auth/drive.appdata": {
+        "Weight": 1,
+        "Description": "View and manage its own configuration data in your Google Drive"
+    },
+    "https://www.googleapis.com/auth/tagmanager.publish": {
+        "Weight": 1,
+        "Description": "Publish your Google Tag Manager container versions"
+    },
+    "https://www.googleapis.com/auth/drive.metadata.readonly": {
+        "Weight": 2,
+        "Description": "View metadata for files in your Google Drive"
+    },
+    "servicecontrol": {
+        "Weight": 1,
+        "Description": "Report usage across Google managed services"
+    },
+    "https://www.googleapis.com/auth/yt-analytics-monetary.readonly": {
+        "Weight": 1,
+        "Description": "View monetary and non-monetary YouTube Analytics reports for your YouTube content"
+    },
+    "https://www.googleapis.com/auth/devstorage.full_control": {
+        "Weight": 10,
+        "Description": "Manage your data and permissions in Google Cloud Storage"
+    },
+    "https://www.googleapis.com/auth/gmail.settings.sharing": {
+        "Weight": 10,
+        "Description": "Manage your sensitive mail settings, including who can manage your mail"
+    },
+    "https://www.googleapis.com/auth/glass.location": {
+        "Weight": 5,
+        "Description": "View your location"
+    },
+    "https://www.googleapis.com/auth/cloud.useraccounts": {
+        "Weight": 10,
+        "Description": "Manage your Google Cloud User Accounts"
+    },
+    "https://www.googleapis.com/auth/fitness.blood_pressure.write": {
+        "Weight": 1,
+        "Description": "View and store blood pressure data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/admin.directory.userschema": {
+        "Weight": 100,
+        "Description": "View and manage the provisioning of user schemas on your domain"
+    },
+    "https://www.googleapis.com/auth/doubleclicksearch": {
+        "Weight": 5,
+        "Description": "View and manage your advertising data in DoubleClick Search"
+    },
+    "https://www.googleapis.com/auth/blogger.readonly": {
+        "Weight": 2,
+        "Description": "View your Blogger account"
+    },
+    "https://www.googleapis.com/auth/logging.read": {
+        "Weight": 1,
+        "Description": "View log data for your projects"
+    },
+    "https://www.googleapis.com/auth/cloud-platform": {
+        "Weight": 10,
+        "Description": "View and manage your data across Google Cloud Platform services"
+    },
+    "https://www.googleapis.com/auth/admin.datatransfer.readonly": {
+        "Weight": 50,
+        "Description": "View data transfers between users in your organization"
+    },
+    "https://www.googleapis.com/auth/appengine.admin": {
+        "Weight": 100,
+        "Description": "View and manage your applications deployed on Google App Engine"
+    },
+    "https://www.googleapis.com/auth/presentations.readonly": {
+        "Weight": 8,
+        "Description": "View your Google Slides presentations"
+    },
+    "https://www.googleapis.com/auth/calendar.readonly": {
+        "Weight": 2,
+        "Description": "View your calendars"
+    },
+    "https://www.googleapis.com/auth/devstorage.read_only": {
+        "Weight": 5,
+        "Description": "View your data in Google Cloud Storage"
+    },
+    "https://www.googleapis.com/auth/glass.timeline": {
+        "Weight": 5,
+        "Description": "View and manage your Glass timeline"
+    },
+    "https://www.googleapis.com/auth/plus.media.upload": {
+        "Weight": 1,
+        "Description": "Send your photos and videos to Google+"
+    },
+    "https://www.googleapis.com/auth/compute.readonly": {
+        "Weight": 1,
+        "Description": "View your Google Compute Engine resources"
+    },
+    "https://www.googleapis.com/auth/fitness.reproductive_health.read": {
+        "Weight": 1,
+        "Description": "View reproductive health data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/tagmanager.manage.users": {
+        "Weight": 5,
+        "Description": "Manage user permissions of your Google Tag Manager account and container"
+    },
+    "https://www.googleapis.com/auth/plus.profiles.read": {
+        "Weight": 1,
+        "Description": "View your own Google+ profile and profiles visible to you"
+    },
+    "https://www.googleapis.com/auth/fitness.oxygen_saturation.write": {
+        "Weight": 1,
+        "Description": "View and store oxygen saturation data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/admin.directory.orgunit": {
+        "Weight": 100,
+        "Description": "View and manage organization units on your domain"
+    },
+    "https://www.googleapis.com/auth/tagmanager.edit.containers": {
+        "Weight": 2,
+        "Description": "Manage your Google Tag Manager container and its subcomponents, excluding versioning and publishing"
+    },
+    "https://www.googleapis.com/auth/fitness.activity.read": {
+        "Weight": 1,
+        "Description": "View your activity information in Google Fit"
+    },
+    "https://www.googleapis.com/auth/admin.directory.customer.readonly": {
+        "Weight": 50,
+        "Description": "View customer related information"
+    },
+    "https://www.googleapis.com/auth/ndev.cloudman": {
+        "Weight": 10,
+        "Description": "View and manage your Google Cloud Platform management resources and deployment status information"
+    },
+    "https://www.googleapis.com/auth/drive.scripts": {
+        "Weight": 5,
+        "Description": "Modify your Google Apps Script scripts' behavior"
+    },
+    "https://www.googleapis.com/auth/fitness.body_temperature.write": {
+        "Weight": 1,
+        "Description": "View and store body temperature data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/admin.directory.rolemanagement": {
+        "Weight": 100,
+        "Description": "Manage delegated admin roles for your domain"
+    },
+    "https://www.googleapis.com/auth/groups": {
+        "Weight": 10,
+        "Description": "View and manage your Google Groups"
+    },
+    "https://www.googleapis.com/auth/firebase": {
+        "Weight": 10,
+        "Description": "View and administer all your Firebase data and settings"
+    },
+    "https://www.googleapis.com/auth/drive.readonly": {
+        "Weight": 8,
+        "Description": "View the files in your Google Drive"
+    },
+    "https://www.googleapis.com/auth/drive.photos.readonly": {
+        "Weight": 2,
+        "Description": "View the photos, videos and albums in your Google Photos"
+    },
+    "https://www.googleapis.com/auth/gmail.readonly": {
+        "Weight": 10,
+        "Description": "View your emails messages and settings"
+    },
+    "https://www.googleapis.com/auth/youtube.force-ssl": {
+        "Weight": 10,
+        "Description": "Manage your YouTube account"
+    },
+    "https://www.googleapis.com/auth/cloud_debugger": {
+        "Weight": 5,
+        "Description": "Manage cloud debugger"
+    },
+    "https://www.googleapis.com/auth/appstate": {
+        "Weight": 10,
+        "Description": "View and manage your data for this application"
+    },
+    "https://www.googleapis.com/auth/presentations": {
+        "Weight": 10,
+        "Description": "View and manage your Google Slides presentations"
+    },
+    "https://www.googleapis.com/auth/fitness.blood_glucose.read": {
+        "Weight": 1,
+        "Description": "View blood glucose data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/tasks.readonly": {
+        "Weight": 1,
+        "Description": "View your tasks"
+    },
+    "https://www.googleapis.com/auth/admin.directory.user": {
+        "Weight": 100,
+        "Description": "View and manage the provisioning of users on your domain"
+    },
+    "https://www.googleapis.com/auth/adexchange.seller.readonly": {
+        "Weight": 2,
+        "Description": "View your Ad Exchange data"
+    },
+    "https://www.googleapis.com/auth/cloudruntimeconfig": {
+        "Weight": 10,
+        "Description": "Manage your Google Cloud Platform services' runtime configuration"
+    },
+    "profile": {
+        "Weight": 1,
+        "Description": "View your basic profile info"
+    },
+    "https://www.googleapis.com/auth/fusiontables": {
+        "Weight": 2,
+        "Description": "Manage your Fusion Tables"
+    },
+    "https://www.googleapis.com/auth/admin.directory.notifications": {
+        "Weight": 100,
+        "Description": "View and manage notifications received on your domain"
+    },
+    "https://www.googleapis.com/auth/fitness.blood_glucose.write": {
+        "Weight": 1,
+        "Description": "View and store blood glucose data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/drive": {
+        "Weight": 10,
+        "Description": "View and manage the files in your Google Drive"
+    },
+    "cloud-platform": {
+        "Weight": 10,
+        "Description": "View and manage your data across Google Cloud Platform services"
+    },
+    "https://www.googleapis.com/auth/logging.write": {
+        "Weight": 1,
+        "Description": "Submit log data for your projects"
+    },
+    "https://www.googleapis.com/auth/analytics.provision": {
+        "Weight": 50,
+        "Description": "Create a new Google Analytics account along with its default property and view"
+    },
+    "https://www.googleapis.com/auth/webmasters.readonly": {
+        "Weight": 5,
+        "Description": "View Search Console data for your verified sites"
+    },
+    "https://www.googleapis.com/auth/compute": {
+        "Weight": 10,
+        "Description": "View and manage your Google Compute Engine resources"
+    },
+    "https://www.googleapis.com/auth/siteverification": {
+        "Weight": 50,
+        "Description": "Manage the list of sites and domains you control"
+    },
+    "https://www.googleapis.com/auth/tagmanager.edit.containerversions": {
+        "Weight": 1,
+        "Description": "Manage your Google Tag Manager container versions"
+    },
+    "https://www.googleapis.com/auth/fusiontables.readonly": {
+        "Weight": 1,
+        "Description": "View your Fusion Tables"
+    },
+    "https://www.googleapis.com/auth/firebase.readonly": {
+        "Weight": 2,
+        "Description": "View all your Firebase data and settings"
+    },
+    "https://www.googleapis.com/auth/playmovies_partner.readonly": {
+        "Weight": 1,
+        "Description": "View the digital assets you publish on Google Play Movies and TV"
+    },
+    "https://www.googleapis.com/auth/analytics": {
+        "Weight": 100,
+        "Description": "View and manage your Google Analytics data"
+    },
+    "https://www.googleapis.com/auth/spreadsheets": {
+        "Weight": 10,
+        "Description": "View and manage your spreadsheets in Google Drive"
+    },
+    "https://www.googleapis.com/auth/manufacturercenter": {
+        "Weight": 5,
+        "Description": "Manage your product listings for Google Manufacturer Center"
+    },
+    "service.management": {
+        "Weight": 10,
+        "Description": "Manage your Google API service configuration"
+    },
+    "https://www.googleapis.com/auth/calendar": {
+        "Weight": 5,
+        "Description": "Manage your calendars"
+    },
+    "https://www.googleapis.com/auth/tagmanager.readonly": {
+        "Weight": 1,
+        "Description": "View your Google Tag Manager container and its subcomponents"
+    },
+    "https://www.googleapis.com/auth/trace.readonly": {
+        "Weight": 1,
+        "Description": "Read Trace data for a project or application"
+    },
+    "https://www.googleapis.com/auth/classroom.course-work.readonly": {
+        "Weight": 1,
+        "Description": "View instructions for teacher-assigned work in your Google Classroom classes"
+    },
+    "https://www.googleapis.com/auth/admin.directory.user.readonly": {
+        "Weight": 50,
+        "Description": "View users on your domain"
+    },
+    "https://www.googleapis.com/auth/gmail.settings.basic": {
+        "Weight": 1,
+        "Description": "Manage your basic mail settings"
+    },
+    "https://www.googleapis.com/auth/classroom.coursework.students.readonly": {
+        "Weight": 1,
+        "Description": "View course work and grades for students in the Google Classroom classes you teach or administer"
+    },
+    "https://www.googleapis.com/auth/service.management": {
+        "Weight": 10,
+        "Description": "Manage your Google API service configuration"
+    },
+    "https://www.googleapis.com/auth/fitness.body.read": {
+        "Weight": 1,
+        "Description": "View body sensor information in Google Fit"
+    },
+    "https://www.googleapis.com/auth/activity": {
+        "Weight": 5,
+        "Description": "View the activity history of your Google Apps"
+    },
+    "https://www.googleapis.com/auth/ndev.clouddns.readwrite": {
+        "Weight": 100,
+        "Description": "View and manage your DNS records hosted by Google Cloud DNS"
+    },
+    "https://www.googleapis.com/auth/classroom.student-submissions.students.readonly": {
+        "Weight": 1,
+        "Description": "View course work and grades for students in the Google Classroom classes you teach or administer"
+    },
+    "https://www.googleapis.com/auth/genomics": {
+        "Weight": 5,
+        "Description": "View and manage Genomics data"
+    },
+    "https://www.googleapis.com/auth/classroom.coursework.students": {
+        "Weight": 2,
+        "Description": "Manage course work and grades for students in the Google Classroom classes you teach and view the course work and grades for classes you administer"
+    },
+    "https://www.googleapis.com/auth/admin.directory.group.member.readonly": {
+        "Weight": 50,
+        "Description": "View group subscriptions on your domain"
+    },
+    "https://www.googleapis.com/auth/monitoring.read": {
+        "Weight": 2,
+        "Description": "View monitoring data for all of your Google Cloud and third-party projects"
+    },
+    "openid": {
+        "Weight": 1,
+        "Description": "Authenticate using OpenID Connect"
+    },
+    "https://www.googleapis.com/auth/tagmanager.manage.accounts": {
+        "Weight": 5,
+        "Description": "View and manage your Google Tag Manager accounts"
+    },
+    "https://www.googleapis.com/auth/gmail.insert": {
+        "Weight": 2,
+        "Description": "Insert mail into your mailbox"
+    },
+    "https://www.googleapis.com/auth/youtube.readonly": {
+        "Weight": 1,
+        "Description": "View your YouTube account"
+    },
+    "https://www.googleapis.com/auth/devstorage.read_write": {
+        "Weight": 10,
+        "Description": "Manage your data in Google Cloud Storage"
+    },
+    "https://www.googleapis.com/auth/spreadsheets.readonly": {
+        "Weight": 8,
+        "Description": "View your Google Spreadsheets"
+    },
+    "https://www.googleapis.com/auth/analytics.edit": {
+        "Weight": 50,
+        "Description": "Edit Google Analytics management entities"
+    },
+    "https://www.googleapis.com/auth/apps.order": {
+        "Weight": 100,
+        "Description": "Manage users on your domain"
+    },
+    "https://www.googleapis.com/auth/servicecontrol": {
+        "Weight": 10,
+        "Description": "Manage your Google Service Control data"
+    },
+    "https://www.googleapis.com/auth/admin.directory.group.readonly": {
+        "Weight": 50,
+        "Description": "View groups on your domain"
+    },
+    "https://www.googleapis.com/auth/plus.stream.read": {
+        "Weight": 5,
+        "Description": "View your Google+ posts, comments, and stream"
+    },
+    "https://www.googleapis.com/auth/gmail.labels": {
+        "Weight": 1,
+        "Description": "Manage mailbox labels"
+    },
+    "https://www.googleapis.com/auth/service.management.readonly": {
+        "Weight": 2,
+        "Description": "View your Google API service configuration"
+    },
+    "https://www.googleapis.com/auth/forms.currentonly": {
+        "Weight": 1,
+        "Description": "View and manage forms that this application has been installed in"
+    },
+    "https://www.googleapis.com/auth/youtube.upload": {
+        "Weight": 10,
+        "Description": "Manage your YouTube videos"
+    },
+    "https://www.googleapis.com/auth/genomics.readonly": {
+        "Weight": 1,
+        "Description": "View Genomics data"
+    },
+    "https://www.googleapis.com/auth/admin.directory.device.chromeos": {
+        "Weight": 20,
+        "Description": "View and manage your Chrome OS devices' metadata"
+    },
+    "https://www.googleapis.com/auth/ndev.clouddns.readonly": {
+        "Weight": 5,
+        "Description": "View your DNS records hosted by Google Cloud DNS"
+    },
+    "https://www.googleapis.com/auth/webmasters": {
+        "Weight": 10,
+        "Description": "View and manage Search Console data for your verified sites"
+    },
+    "https://www.googleapis.com/auth/blogger": {
+        "Weight": 5,
+        "Description": "Manage your Blogger account"
+    },
+    "https://www.googleapis.com/auth/apps.order.readonly": {
+        "Weight": 100,
+        "Description": "Manage users on your domain"
+    },
+    "https://www.googleapis.com/auth/admin.datatransfer": {
+        "Weight": 100,
+        "Description": "View and manage data transfers between users in your organization"
+    },
+    "https://www.google.com/accounts/OAuthLogin": {
+        "Weight": 100,
+        "Description": "Full account access"
+    },
+    "https://www.googleapis.com/auth/user.birthday.read": {
+        "Weight": 1,
+        "Description": "View your complete date of birth"
+    },
+    "https://www.googleapis.com/auth/dfatrafficking": {
+        "Weight": 2,
+        "Description": "View and manage your DoubleClick Campaign Manager's (DCM) display ad campaigns"
+    },
+    "https://www.googleapis.com/auth/admin.directory.user.alias.readonly": {
+        "Weight": 50,
+        "Description": "View user aliases on your domain"
+    },
+    "https://www.googleapis.com/auth/fitness.reproductive_health.write": {
+        "Weight": 1,
+        "Description": "View and store reproductive health data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/admin.directory.device.chromeos.readonly": {
+        "Weight": 10,
+        "Description": "View your Chrome OS devices' metadata"
+    },
+    "https://www.googleapis.com/auth/user.phonenumbers.read": {
+        "Weight": 1,
+        "Description": "View your phone numbers"
+    },
+    "https://www.googleapis.com/auth/admin.directory.device.mobile.action": {
+        "Weight": 90,
+        "Description": "Manage your mobile devices by performing administrative tasks"
+    },
+    "https://www.googleapis.com/auth/ndev.cloudman.readonly": {
+        "Weight": 1,
+        "Description": "View your Google Cloud Platform management resources and deployment status information"
+    },
+    "https://www.googleapis.com/auth/siteverification.verify_only": {
+        "Weight": 50,
+        "Description": "Manage your new site verifications with Google"
+    },
+    "https://www.googleapis.com/auth/admin.directory.group": {
+        "Weight": 100,
+        "Description": "View and manage the provisioning of groups on your domain"
+    },
+    "https://www.googleapis.com/auth/ddmconversions": {
+        "Weight": 2,
+        "Description": "Manage DoubleClick Digital Marketing conversions"
+    },
+    "https://www.googleapis.com/auth/monitoring.write": {
+        "Weight": 1,
+        "Description": "Publish metric data to your Google Cloud projects"
+    },
+    "https://www.googleapis.com/auth/fitness.location.write": {
+        "Weight": 5,
+        "Description": "View and store your location data in Google Fit"
+    },
+    "https://www.googleapis.com/auth/youtubepartner-channel-audit": {
+        "Weight": 5,
+        "Description": "View private information of your YouTube channel relevant during the audit process with a YouTube partner"
+    },
+    "https://www.googleapis.com/auth/monitoring": {
+        "Weight": 10,
+        "Description": "View and write monitoring data for all of your Google and third-party Cloud and API projects"
+    },
+    "https://www.googleapis.com/auth/user.emails.read": {
+        "Weight": 1,
+        "Description": "View your email addresses"
+    },
+    "https://www.googleapis.com/auth/userinfo.profile": {
+        "Weight": 1,
+        "Description": "View your basic profile info"
+    },
+    "https://www.googleapis.com/auth/youtube": {
+        "Weight": 10,
+        "Description": "Manage your YouTube account"
+    },
+    "https://www.google.com/calendar/feeds": {
+        "Weight": 5,
+        "Description": "Manage your calendars"
+    },
+    "https://www.googleapis.com/auth/classroom.rosters": {
+        "Weight": 2,
+        "Description": "Manage your Google Classroom class rosters"
+    },
+    "https://www.googleapis.com/auth/fitness.nutrition.write": {
+        "Weight": 1,
+        "Description": "View and store nutrition information in Google Fit"
+    },
+    "https://www.googleapis.com/auth/analytics.manage.users": {
+        "Weight": 50,
+        "Description": "Manage Google Analytics Account users by email address"
+    },
+    "https://www.googleapis.com/auth/classroom.rosters.readonly": {
+        "Weight": 1,
+        "Description": "View your Google Classroom class rosters"
+    },
+    "https://www.googleapis.com/auth/gmail.compose": {
+        "Weight": 5,
+        "Description": "Manage drafts and send emails"
+    },
+    "https://www.googleapis.com/auth/admin.directory.userschema.readonly": {
+        "Weight": 50,
+        "Description": "View user schemas on your domain"
+    },
+    "https://www.googleapis.com/auth/admin.directory.device.mobile": {
+        "Weight": 100,
+        "Description": "View and manage your mobile devices' metadata"
+    },
+    "https://www.googleapis.com/auth/replicapool": {
+        "Weight": 10,
+        "Description": "View and manage replica pools"
+    },
+    "https://www.googleapis.com/auth/classroom.profile.emails": {
+        "Weight": 2,
+        "Description": "View the email addresses of people in your classes"
+    },
+    "https://www.googleapis.com/auth/adexchange.seller": {
+        "Weight": 20,
+        "Description": "View and manage your Ad Exchange data"
+    },
+    "https://www.googleapis.com/auth/admin.directory.device.mobile.readonly": {
+        "Weight": 50,
+        "Description": "View your mobile devices' metadata"
+    },
+    "https://www.googleapis.com/auth/userlocation.beacon.registry": {
+        "Weight": 10,
+        "Description": "View and modify your beacons"
+    },
+    "https://www.googleapis.com/auth/logging.admin": {
+        "Weight": 5,
+        "Description": "Administrate log data for your projects"
+    },
+    "https://www.googleapis.com/auth/contacts": {
+        "Weight": 5,
+        "Description": "Manage your contacts"
+    },
+    "https://www.googleapis.com/auth/admin.reports.audit.readonly": {
+        "Weight": 50,
+        "Description": "View audit reports of Google Apps for your domain"
+    },
+    "https://www.googleapis.com/auth/plus.circles.write": {
+        "Weight": 5,
+        "Description": "Manage your circles and add people and pages. People and pages you add to your circles will be notified. Others may see this information publicly. People you add to circles can use Hangouts with you."
+    },
+    "https://www.googleapis.com/auth/yt-analytics.readonly": {
+        "Weight": 1,
+        "Description": "View YouTube Analytics reports for your YouTube content"
+    },
+    "https://www.googleapis.com/auth/bigquery": {
+        "Weight": 10,
+        "Description": "View and manage your data in Google BigQuery"
+    },
+    "https://www.googleapis.com/auth/adsense": {
+        "Weight": 100,
+        "Description": "View and manage your AdSense data"
+    },
+    "https://www.googleapis.com/auth/admin.directory.user.alias": {
+        "Weight": 100,
+        "Description": "View and manage user aliases on your domain"
+    },
+    "https://www.googleapis.com/auth/youtubepartner": {
+        "Weight": 10,
+        "Description": "View and manage your assets and associated content on YouTube"
+    },
+    "https://www.googleapis.com/auth/classroom.coursework.me": {
+        "Weight": 2,
+        "Description": "Manage your course work and view your grades in Google Classroom"
+    },
+    "https://www.googleapis.com/auth/replicapool.readonly": {
+        "Weight": 1,
+        "Description": "View replica pools"
+    },
+    "https://www.googleapis.com/auth/tagmanager.delete.containers": {
+        "Weight": 1,
+        "Description": "Delete your Google Tag Manager containers"
+    },
+    "https://www.googleapis.com/auth/analytics.manage.users.readonly": {
+        "Weight": 5,
+        "Description": "View Google Analytics user permissions"
+    },
+    "https://www.googleapis.com/auth/gmail.modify": {
+        "Weight": 8,
+        "Description": "View and modify but not delete your email"
+    },
+    "https://www.googleapis.com/auth/plus.login": {
+        "Weight": 1,
+        "Description": "Know the list of people in your circles, your age range, and language"
+    },
+    "https://www.googleapis.com/auth/admin.directory.rolemanagement.readonly": {
+        "Weight": 50,
+        "Description": "View delegated admin roles for your domain"
+    },
+    "https://www.googleapis.com/auth/classroom.courses.readonly": {
+        "Weight": 1,
+        "Description": "View your Google Classroom classes"
+    },
+    "https://www.googleapis.com/auth/admin.directory.resource.calendar": {
+        "Weight": 100,
+        "Description": "View and manage the provisioning of calendar resources on your domain"
+    },
+    "https://www.googleapis.com/auth/fitness.nutrition.read": {
+        "Weight": 1,
+        "Description": "View nutrition information in Google Fit"
+    },
+    "https://www.googleapis.com/auth/androidenterprise": {
+        "Weight": 100,
+        "Description": "Manage corporate Android devices"
+    },
+    "https://www.googleapis.com/auth/prediction": {
+        "Weight": 10,
+        "Description": "Manage your data in the Google Prediction API"
+    },
+    "https://www.googleapis.com/auth/androidpublisher": {
+        "Weight": 10,
+        "Description": "View and manage your Google Play Developer account"
+    },
+    "https://www.googleapis.com/auth/drive.metadata": {
+        "Weight": 5,
+        "Description": "View and manage metadata of files in your Google Drive"
+    },
+    "https://www.googleapis.com/auth/gmail.send": {
+        "Weight": 8,
+        "Description": "Send email on your behalf"
+    },
+    "https://www.googleapis.com/auth/plus.me": {
+        "Weight": 1,
+        "Description": "Know who you are on Google"
+    },
+    "https://www.googleapis.com/auth/content": {
+        "Weight": 2,
+        "Description": "Manage your product listings and accounts for Google Shopping"
+    },
+    "https://www.googleapis.com/auth/fitness.activity.write": {
+        "Weight": 1,
+        "Description": "View and store your activity information in Google Fit"
+    },
+    "https://www.googleapis.com/auth/analytics.readonly": {
+        "Weight": 5,
+        "Description": "View your Google Analytics data"
+    },
+    "https://www.googleapis.com/auth/classroom.profile.photos": {
+        "Weight": 1,
+        "Description": "View the profile photos of people in your classes"
+    }
+}
