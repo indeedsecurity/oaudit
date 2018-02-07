@@ -26,7 +26,8 @@ parser.add_argument('--service-account-email', required=True, type=str, dest='SE
 parser.add_argument('--sender-email', required=True, type=str, dest='SENDER_EMAIL')
 parser.add_argument('--elasticsearch-hosts', required=False, type=str, dest='ELASTICSEARCH_HOSTS',
                     default='localhost:9200')
-parser.add_argument('--elasticsearch-index', required=False, type=str, dest='INDEX_NAME', default='sec-oauth')
+parser.add_argument('--elasticsearch-data-index', required=False, type=str, dest='DATA_INDEX_NAME', default='sec-oauth')
+parser.add_argument('--elasticsearch-state-index', required=False, type=str, dest='STATE_INDEX_NAME', default='oauditnotify-state')
 parser.add_argument('--smtp-server', required=True, type=str, dest='SMTP_SERVER')
 parser.add_argument('--test-email', required=True, type=str, dest='TEST_EMAIL')
 args = parser.parse_args()
@@ -35,7 +36,7 @@ ES_HOSTS = args.ELASTICSEARCH_HOSTS.split(",")
 # If modifying these scopes, delete your previously saved credentials
 # at ~/.credentials/admin-directory_v1-python-quickstart.json
 if not os.path.isfile(args.CLIENT_SECRET_FILE):
-    print("Google API client secret file found: {}".format(args.CLIENT_SECRET_FILE))
+    print("Google API client secret file not found: {}".format(args.CLIENT_SECRET_FILE))
 APPLICATION_NAME = 'OAuth Notifier'
 
 class AuthEvent:
@@ -138,7 +139,7 @@ def sendMail(app, doc, template):
     timestamp = prettyDate.strftime("%a %b %d, %H:%M")
 
     msg = MIMEMultipart()
-    msg['From'] = formataddr((str(Header(u'Indeed Google Apps Notification', 'utf-8')), args.SENDER_EMAIL))
+    msg['From'] = formataddr((str(Header(u'Google Apps Notification', 'utf-8')), args.SENDER_EMAIL))
     msg['To'] = doc['actor']
     msg['Subject'] = "[Notification] You have authorized {0} access".format(doc['app_name'])
 
@@ -150,7 +151,7 @@ def sendMail(app, doc, template):
     server.sendmail(args.SENDER_EMAIL, args.TEST_EMAIL, msg.as_string())
     server.sendmail(args.SENDER_EMAIL, doc['actor'], msg.as_string())
     server.quit()
-    print("Sent email to {0} at {1} ({2} CST)".format(doc['actor'],doc['event_timestamp'], timestamp))
+    print("Sent email to {0} at {1} ({2}".format(doc['actor'],doc['event_timestamp'], timestamp))
 
 
 def getAuthsFromES(app):
@@ -221,8 +222,6 @@ def notify(app):
 
 
 def main():
-    DATA_INDEX_NAME = "sec-oauth"  # Prefix of ES data index name
-    STATE_INDEX_NAME = "oauditnotify-state"  # Prefix of ES state index name
 
     credentials = get_credentials()
     http = credentials.authorize(Http())
@@ -265,8 +264,8 @@ def main():
 
     app = App(api=api,
               es=es,
-              data_index_name=DATA_INDEX_NAME,
-              state_index_name=STATE_INDEX_NAME,
+              data_index_name=args.DATA_INDEX_NAME,
+              state_index_name=args.STATE_INDEX_NAME,
               whitelist=whitelist,
               blacklist=blacklist,
               google_scopes=google_scopes,

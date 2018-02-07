@@ -30,7 +30,7 @@ ES_HOSTS = args.ELASTICSEARCH_HOSTS.split(",")
 # at ~/.credentials/admin-directory_v1-python-quickstart.json
 # then the library may pick those up rather than the one we specify here
 if not os.path.isfile(args.CLIENT_SECRET_FILE):
-    print("Google API client secret file found: {}".format(args.CLIENT_SECRET_FILE))
+    print("Google API client secret file not found: {}".format(args.CLIENT_SECRET_FILE))
 
 APPLICATION_NAME = 'Directory API Python Quickstart'
 
