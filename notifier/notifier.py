@@ -27,7 +27,8 @@ parser.add_argument('--sender-email', required=True, type=str, dest='SENDER_EMAI
 parser.add_argument('--elasticsearch-hosts', required=False, type=str, dest='ELASTICSEARCH_HOSTS',
                     default='localhost:9200')
 parser.add_argument('--elasticsearch-data-index', required=False, type=str, dest='DATA_INDEX_NAME', default='sec-oauth')
-parser.add_argument('--elasticsearch-state-index', required=False, type=str, dest='STATE_INDEX_NAME', default='oauditnotify-state')
+parser.add_argument('--elasticsearch-state-index', required=False, type=str, dest='STATE_INDEX_NAME',
+                    default='oauditnotify-state')
 parser.add_argument('--smtp-server', required=True, type=str, dest='SMTP_SERVER')
 parser.add_argument('--test-email', required=True, type=str, dest='TEST_EMAIL')
 args = parser.parse_args()
@@ -38,6 +39,7 @@ ES_HOSTS = args.ELASTICSEARCH_HOSTS.split(",")
 if not os.path.isfile(args.CLIENT_SECRET_FILE):
     print("Google API client secret file not found: {}".format(args.CLIENT_SECRET_FILE))
 APPLICATION_NAME = 'OAuth Notifier'
+
 
 class AuthEvent:
     def __init__(self, appName, clientId, uniqueId, actor, scopes, eventTime):
@@ -62,11 +64,14 @@ class App:
         self.template = template
         self.blacklistTemplate = blacklistTemplate
 
+
 def get_credentials():
-    scopes = ['https://www.googleapis.com/auth/admin.reports.audit.readonly https://www.googleapis.com/auth/admin.directory.user.security']
-    credentials = ServiceAccountCredentials.from_json_keyfile_name(CLIENT_SECRET_FILE, scopes=scopes)
+    scopes = [
+        'https://www.googleapis.com/auth/admin.reports.audit.readonly https://www.googleapis.com/auth/admin.directory.user.security']
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(args.CLIENT_SECRET_FILE, scopes=scopes)
     delegated_credentials = credentials.create_delegated(args.SERVICE_ACCOUNT_EMAIL)
     return delegated_credentials
+
 
 def inElasticsearch(es, state_index_name, uniqueId, doc_type="authorize"):
     date = datetime.today()
@@ -116,6 +121,7 @@ def checkBlacklist(blacklist, clientId):
     else:
         return True
 
+
 def deleteToken(api, actor, clientId):
     try:
         results = api.tokens().delete(userKey=actor, clientId=clientId).execute()
@@ -151,23 +157,35 @@ def sendMail(app, doc, template):
     server.sendmail(args.SENDER_EMAIL, args.TEST_EMAIL, msg.as_string())
     server.sendmail(args.SENDER_EMAIL, doc['actor'], msg.as_string())
     server.quit()
-    print("Sent email to {0} at {1} ({2}".format(doc['actor'],doc['event_timestamp'], timestamp))
+    print("Sent email to {0} at {1} ({2}".format(doc['actor'], doc['event_timestamp'], timestamp))
 
 
 def getAuthsFromES(app):
+    blacklisted = []
+    for id in app.blacklist:
+        blacklisted.append(
+            {
+                "match": {
+                    "client_id": {
+                        "query": id
+                    }
+                }
+            })
+
     query = {
         "query": {
             "bool": {
-            "must": [
-                {
-                "range": {
-                    "event_timestamp": {
-                    "gte": "now-48h",
-                    "format": "epoch_millis"
+                "must": [
+                    {
+                        "range": {
+                            "event_timestamp": {
+                                "gte": "now-48h",
+                                "format": "epoch_millis"
+                            }
+                        }
                     }
-                }
-                }
-            ]
+                ],
+                "must_not": blacklisted,
             }
         }
     }
@@ -222,7 +240,6 @@ def notify(app):
 
 
 def main():
-
     credentials = get_credentials()
     http = credentials.authorize(Http())
     print("Found credentials")
