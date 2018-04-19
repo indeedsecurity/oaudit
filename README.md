@@ -25,7 +25,7 @@ sends notifications with educational information about Oauth scopes.
 
 ### Architecture diagram
 
-![oaudit toolkit](oaudit.svg)
+![oaudit toolkit](oaudit.png)
 
 ## Getting started
 
